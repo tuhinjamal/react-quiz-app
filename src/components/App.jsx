@@ -1,9 +1,11 @@
-import { useState } from "react";
-
+import Layout from "./Layout";
+import Home from "./pages/Home";
 function App() {
-  const [count, setCount] = useState(0);
-
-  return <>Hello world</>;
+  return (
+    <Layout>
+      <Home />
+    </Layout>
+  );
 }
 
 export default App;
