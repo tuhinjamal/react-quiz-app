@@ -1,18 +1,23 @@
+import { Route, Routes } from "react-router-dom";
 import Layout from "./Layout";
-// import Home from "./pages/Home";
-// import Signup from "./pages/Signup";
-// import Quiz from "./pages/Quiz";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Quiz from "./pages/Quiz";
 import Result from "./pages/Result";
-// import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 function App() {
   return (
-    <Layout>
-      {/* <Home /> */}
-      {/* <Signup /> */}
-      {/* <Login /> */}
-      {/* <Quiz /> */}
-      <Result />
-    </Layout>
+    <>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/quiz" element={<Quiz />} />
+          <Route path="/result" element={<Result />} />
+        </Routes>
+      </Layout>
+    </>
   );
 }
 
