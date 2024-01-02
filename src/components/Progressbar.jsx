@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import propTypes from "prop-types";
 import classes from "../styles/Progressbar.module.css";
 import Button from "./Button";
 export default function Progessbar({ next, prev, submit, progress }) {
@@ -29,3 +29,9 @@ export default function Progessbar({ next, prev, submit, progress }) {
     </>
   );
 }
+Progessbar.propTypes = {
+  next: propTypes.any,
+  prev: propTypes.any,
+  submit: propTypes.any,
+  progress: propTypes.any,
+};

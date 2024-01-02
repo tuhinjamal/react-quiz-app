@@ -23,8 +23,8 @@ export default function useQustions(videoID) {
           // setVideos(() => {
           //   return [...Object.values(snapshot.val())];
           // });
-          setQuestions((prevQuestions) => {
-            return [...prevQuestions, ...Object.values(snapshot.val())];
+          setQuestions(() => {
+            return [...Object.values(snapshot.val())];
           });
         }
       } catch (err) {
