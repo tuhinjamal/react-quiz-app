@@ -69,7 +69,7 @@ export default function Quiz() {
       [id]: qna,
     });
 
-    navigateTo(`/result/${id}`, { state: qna });
+    navigateTo(`/result/${id}`, { state: { qna: qna } });
   }
 
   // calculate percentage of progress
