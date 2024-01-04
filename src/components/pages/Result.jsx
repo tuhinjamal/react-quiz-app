@@ -10,14 +10,17 @@ export default function Result() {
   const { qna } = state;
   const { loading, error, answers } = useAnswer(id);
 
-  console.log("qna", qna);
+  console.log("qna", location);
   function calculate() {
     let score = 0;
     answers.forEach((question, index1) => {
       let corretIndexes = [],
         checkedIndexes = [];
       question.options.forEach((option, index2) => {
-        if (option.correct) corretIndexes.push(index2);
+        if (option.correct) {
+          console.log("option.correct", option.correct);
+          corretIndexes.push(index2);
+        }
         if (qna[index1].options[index2].checked) {
           checkedIndexes.push(index2);
           option.checked = true;
