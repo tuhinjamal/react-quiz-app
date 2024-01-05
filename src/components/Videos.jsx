@@ -21,6 +21,7 @@ export default function Videos() {
               <Link
                 to={`/quiz/${video.youtubeID}`}
                 key={`${video.youtubeID}-${index}`}
+                state={{ title: video.title }}
               >
                 <Video
                   title={video.title}

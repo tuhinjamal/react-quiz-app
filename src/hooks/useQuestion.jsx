@@ -20,9 +20,7 @@ export default function useQustions(videoID) {
         const snapshot = await get(quizQuery);
         setLoading(false);
         if (snapshot.exists()) {
-          // setVideos(() => {
-          //   return [...Object.values(snapshot.val())];
-          // });
+         
           setQuestions(() => {
             return [...Object.values(snapshot.val())];
           });

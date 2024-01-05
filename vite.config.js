@@ -8,4 +8,9 @@ export default defineConfig({
   optimizeDeps: {
     include: ["lodash"],
   },
+  // other configurations...
+  define: {
+    // eslint-disable-next-line no-undef
+    "process.env": process.env,
+  },
 });
